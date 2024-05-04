@@ -1,3 +1,4 @@
+import 'package:akilli_kampus/view/change_password/view/change_password._page.dart';
 import 'package:akilli_kampus/view/main/view/main_page.dart';
 import 'package:akilli_kampus/view/splash/view/splash_view.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,10 @@ class NavigationRoute {
 
       case NavigationConstants.DEFAULT:
         return normalNavigate(const SplashView(), NavigationConstants.DEFAULT ,args.arguments); //SplashView
+
+      case NavigationConstants.CHANGE_PASSWORD:
+        return normalNavigate(const ChangePassword(), NavigationConstants.CHANGE_PASSWORD ,args.arguments); //SplashView
+
 
       case NavigationConstants.MAIN:
         return normalNavigate( const MainPage(), NavigationConstants.MAIN ,args.arguments);

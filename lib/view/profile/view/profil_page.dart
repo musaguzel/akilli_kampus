@@ -1,4 +1,5 @@
 import 'package:akilli_kampus/core/base/view/base_widget.dart';
+import 'package:akilli_kampus/core/constants/navigation/navigation_constants.dart';
 import 'package:akilli_kampus/view/profile/viewModel/profile_page_view_model.dart';
 import 'package:flutter/material.dart';
 
@@ -38,10 +39,10 @@ class _ProfilePageState extends State<ProfilePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
              Padding(
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 children: [
-                  SizedBox(width: 8),
+                  const SizedBox(width: 8),
                   Text(
                     'Bildirimleri açarak anında güncel haberleri takip edin!',
                     style: TextStyle(
@@ -81,7 +82,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        // Buraya Şifre Değiştir ile ilgili yapılacak işlemleri ekle
+                        viewModel.navigation.navigateToPage(path: NavigationConstants.CHANGE_PASSWORD);
                       },
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
@@ -129,7 +130,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: ListTile(
                           title: Text("Çıkış Yap"),
-                          trailing: Icon(Icons.arrow_forward_ios),
+                          trailing: Icon(Icons.close),
                         ),
                       ),
                     ),

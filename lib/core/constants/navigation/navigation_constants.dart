@@ -15,4 +15,7 @@ class NavigationConstants {
   static const MAIN = '/main';
 
 
+  static const CHANGE_PASSWORD = '/changepassword';
+
+
 }
