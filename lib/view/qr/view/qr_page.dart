@@ -53,17 +53,46 @@ class _QRCodeWidgetState extends State<QRCodeWidget> {
         title: const Text("DpuTakQR"),
       ),
       body: Column(
+
         children: [
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text(
-              "Tarama ",
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.w500,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  "Tarama ",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ),
-            ),
+              ElevatedButton.icon(
+                onPressed: () {
+                  if (result.isNotEmpty) {
+                    Clipboard.setData(ClipboardData(text: result));
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("Kopyalandı")),
+                    );
+                  }
+                },
+                icon: const Icon(Icons.copy),
+                label: const Text("Kopyala"),
+              ),
+              ElevatedButton.icon(
+                onPressed: () async {
+                  if (result.isNotEmpty) {
+                    final Uri _url = Uri.parse(result);
+                    await launchUrl(_url);
+                  }
+                },
+                icon: const Icon(Icons.open_in_browser),
+                label: const Text("Aç"),
+              ),
+            ],
           ),
+
           Expanded(
             flex: 5,
             child: QRView(
@@ -71,45 +100,7 @@ class _QRCodeWidgetState extends State<QRCodeWidget> {
               onQRViewCreated: _onQRViewCreated,
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Center(
-              child: Text(
-                result.isEmpty ? "QR bulunamadı" : "Result: $result",
-                style: const TextStyle(fontSize: 18),
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                ElevatedButton.icon(
-                  onPressed: () {
-                    if (result.isNotEmpty) {
-                      Clipboard.setData(ClipboardData(text: result));
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text("Kopyalandı")),
-                      );
-                    }
-                  },
-                  icon: const Icon(Icons.copy),
-                  label: const Text("Kopyala"),
-                ),
-                ElevatedButton.icon(
-                  onPressed: () async {
-                    if (result.isNotEmpty) {
-                      final Uri _url = Uri.parse(result);
-                      await launchUrl(_url);
-                    }
-                  },
-                  icon: const Icon(Icons.open_in_browser),
-                  label: const Text("Aç"),
-                ),
-              ],
-            ),
-          ),
+
         ],
       ),
     );

@@ -129,6 +129,7 @@ class HomePage extends StatelessWidget {
             delay: 0.5,
             child: ListView.builder(
               itemBuilder: (context, index) {
+                final newsItem = viewModel.anouncementPosts[index];
                 return AnouncementItem(
                   anouncementModel: viewModel.anouncementPosts[index],
                   viewModel: viewModel,
@@ -158,7 +159,6 @@ class HomePage extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0),
               child: GestureDetector(
                 onTap: () {
-                  // Buraya tıklandığında yapılacak işlem
                 },
                 child: CachedNetworkImage(
                   imageUrl: viewModel.newsList[index].imageUrl.first,

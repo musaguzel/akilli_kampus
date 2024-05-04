@@ -37,8 +37,7 @@ class AnouncementItem extends StatelessWidget {
     return Expanded(
       child: ListTile(
         onTap: () {
-         /* navigationService.navigateToPage(
-              path: NavigationConstants.NEWS_DETAIL, data: newsModel);*/
+          viewModel.navigation.navigateToPage(path: NavigationConstants.NEWS_DETAILS,data: anouncementModel);
         },
         title: anouncementModel.toJson().isNotEmpty
             ? Text(

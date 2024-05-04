@@ -15,11 +15,16 @@ class NavigationConstants {
 
   static const QR = '/qr';
 
+  static const EMERGENCYBUTTON = '/emergencybuttonapp';
+
   static const MAIN = '/main';
 
   static const PRIVACY_POLICY = '/privacypolicy';
 
   static const TERMS_CONDITIONS = '/termsconditions';
+
+
+  static const NEWS_DETAILS = '/newsdetails';
 
 
   static const CHANGE_PASSWORD = '/changepassword';
