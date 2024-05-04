@@ -1,3 +1,4 @@
+import 'package:akilli_kampus/core/extension/string_extension.dart';
 import 'package:akilli_kampus/product/gradient_background/gradient_background.dart';
 import 'package:flutter/material.dart';
 import '../../../core/base/state/base_state.dart';
@@ -28,10 +29,24 @@ class _SplashViewState extends BaseState<SplashView> {
   }
 
   Widget buildScaffoldBody(BuildContext context, SplashViewModel viewModel) {
-    return const Scaffold(
+    return  Scaffold(
       body:  CustomGradientBackground(
         child: Center(
-          child: Text('Akıllı Kampüs'),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset('DPUTAK LOGO'.toPNG,height: 170,),
+              const Center(
+                child: ListTile(
+                  title: Divider(color: Colors.indigo,thickness: 1 ,)           ,
+                  subtitle: Center(child: Text('\nTeknolojik Akıllı Kampüs',style: TextStyle(color: Colors.indigo,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic),)),
+
+                ),
+              )
+
+            ],
+          ),
         ),
       )
     );

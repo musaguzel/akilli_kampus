@@ -1,4 +1,5 @@
 import 'package:akilli_kampus/view/academic_calendar/view/academic_calendar_page.dart';
+import 'package:akilli_kampus/view/authentication/onboarding/view/onboarding_page.dart';
 import 'package:akilli_kampus/view/bank_card/view/bank_card_page.dart';
 import 'package:akilli_kampus/view/change_password/view/change_password._page.dart';
 import 'package:akilli_kampus/view/home/view/news_details_page.dart';
@@ -43,6 +44,9 @@ class NavigationRoute {
 
       case NavigationConstants.RESTOURANT:
         return normalNavigate(yemekhane(), NavigationConstants.RESTOURANT ,args.arguments);
+
+      case NavigationConstants.ONBOARDING:
+        return normalNavigate(const OnBoardingScreen(), NavigationConstants.ONBOARDING ,args.arguments);
 
       case NavigationConstants.ACADEMIC_CALENDAR:
         return normalNavigate(const AcademicCalendar(), NavigationConstants.ACADEMIC_CALENDAR ,args.arguments);

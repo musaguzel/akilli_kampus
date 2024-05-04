@@ -26,7 +26,7 @@ abstract class _SplashViewModelBase with Store, BaseViewModel {
 
         firebaseAuth.authStateChanges().listen((User? user) {
           if (user == null) {
-            navigation.navigateToPageClear(path: NavigationConstants.MAIN);
+            navigation.navigateToPageClear(path: NavigationConstants.ONBOARDING);
             debugPrint("çıkış yapıldı");
           } else {
             navigation.navigateToPageClear(path:  NavigationConstants.MAIN);

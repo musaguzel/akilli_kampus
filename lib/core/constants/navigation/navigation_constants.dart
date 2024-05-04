@@ -21,6 +21,8 @@ class NavigationConstants {
 
   static const MAIN = '/main';
 
+  static const ONBOARDING = '/onboarding';
+
   static const PRIVACY_POLICY = '/privacypolicy';
 
   static const ACADEMIC_CALENDAR = '/academiccalendar';
