@@ -17,12 +17,17 @@ class NavigationConstants {
 
   static const EMERGENCYBUTTON = '/emergencybuttonapp';
 
+  static const RESTOURANT = '/restourant';
+
   static const MAIN = '/main';
 
   static const PRIVACY_POLICY = '/privacypolicy';
 
+  static const ACADEMIC_CALENDAR = '/academiccalendar';
+
   static const TERMS_CONDITIONS = '/termsconditions';
 
+  static const BANK_CARD = '/bankcard';
 
   static const NEWS_DETAILS = '/newsdetails';
 

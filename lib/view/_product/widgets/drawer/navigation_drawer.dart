@@ -1,4 +1,5 @@
 import 'package:akilli_kampus/view/profile/viewModel/profile_page_view_model.dart';
+import 'package:akilli_kampus/view/weather/view/weather_page.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -41,9 +42,13 @@ class NavigationDrawerMain extends StatelessWidget {
                 width: 3.0, // Çizgi kalınlığı
               ),),
             padding: const EdgeInsets.only(top: 20.0,bottom: 20.0,left: 50.0,right: 50.0),
-            child: const Column(
+            child:  Column(
               children: [
-                Text("İyi Günler Musa ☀️",style: TextStyle(color: Color(0xFF4E4CCA)),),
+                const Text("İyi Günler Musa ",style: TextStyle(color: Color(0xFF4E4CCA),fontSize: 20,fontWeight: FontWeight.bold),),
+
+
+                Container(height: 140,child: WeatherPage()),
+
               ],
             ),
           ),
@@ -94,13 +99,13 @@ class NavigationDrawerMain extends StatelessWidget {
     Navigator.of(context).pop();
     switch(index){
       case 0:
-        navigation.navigateToPage(path: NavigationConstants.MAIN);
+        navigation.navigateToPage(path: NavigationConstants.ACADEMIC_CALENDAR);
         break;
       case 1:
         navigation.navigateToPage(path: NavigationConstants.TERMS_CONDITIONS);
         break;
       case 2:
-        navigation.navigateToPage(path: NavigationConstants.NEWS_DETAILS);
+        navigation.navigateToPage(path: NavigationConstants.BANK_CARD);
         break;
       case 3:
         navigation.navigateToPage(path: NavigationConstants.CHANGE_PASSWORD);

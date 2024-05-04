@@ -1,7 +1,10 @@
+import 'package:akilli_kampus/view/academic_calendar/view/academic_calendar_page.dart';
+import 'package:akilli_kampus/view/bank_card/view/bank_card_page.dart';
 import 'package:akilli_kampus/view/change_password/view/change_password._page.dart';
 import 'package:akilli_kampus/view/home/view/news_details_page.dart';
 import 'package:akilli_kampus/view/main/view/main_page.dart';
 import 'package:akilli_kampus/view/privacy_policy/view/privacy_policy_page.dart';
+import 'package:akilli_kampus/view/restourant/view/restourant_page.dart';
 import 'package:akilli_kampus/view/sos/view/sos.dart';
 import 'package:akilli_kampus/view/splash/view/splash_view.dart';
 import 'package:akilli_kampus/view/terms_conditions/view/terms_conditions._page.dart';
@@ -37,6 +40,15 @@ class NavigationRoute {
 
       case NavigationConstants.QR:
         return normalNavigate(const PrivacyPolicy(), NavigationConstants.QR ,args.arguments);
+
+      case NavigationConstants.RESTOURANT:
+        return normalNavigate(yemekhane(), NavigationConstants.RESTOURANT ,args.arguments);
+
+      case NavigationConstants.ACADEMIC_CALENDAR:
+        return normalNavigate(const AcademicCalendar(), NavigationConstants.ACADEMIC_CALENDAR ,args.arguments);
+
+      case NavigationConstants.BANK_CARD:
+        return normalNavigate(BankaCard(), NavigationConstants.BANK_CARD ,args.arguments);
 
       case NavigationConstants.MAIN:
         return normalNavigate( const MainPage(), NavigationConstants.MAIN ,args.arguments);

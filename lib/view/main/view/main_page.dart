@@ -3,6 +3,7 @@ import 'package:akilli_kampus/product/widgets/shimmer/shimmer_widget.dart';
 import 'package:akilli_kampus/view/home/view/home_page.dart';
 import 'package:akilli_kampus/view/profile/view/profil_page.dart';
 import 'package:akilli_kampus/view/qr/view/qr_page.dart';
+import 'package:akilli_kampus/view/restourant/view/restourant_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -88,9 +89,9 @@ class MainPage extends StatelessWidget {
                       text: 'Ana Sayfa'),
                   buildObserver(
                       viewModel: viewModel,
-                      icon: Icons.announcement,
+                      icon: Icons.fastfood_outlined,
                       selectedTabIndex: 1,
-                      text: "Duyurular"),
+                      text: "Yemekhane"),
                   buildObserver(
                       viewModel: viewModel,
                       icon: Icons.qr_code,
@@ -113,11 +114,11 @@ class MainPage extends StatelessWidget {
   }
 
   TabBarView get buildTabBarView {
-    return const TabBarView(children: [
-      HomePage(),
-      HomePage(),
-      QRCodeWidget(),
-      ProfilePage(),
+    return  TabBarView(children: [
+      const HomePage(),
+      yemekhane(),
+      const QRCodeWidget(),
+      const ProfilePage(),
     ]);
   }
 
