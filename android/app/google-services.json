@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "496963894526",
+    "project_id": "akillikampus-4ee8c",
+    "storage_bucket": "akillikampus-4ee8c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:496963894526:android:52bbb5332840fe2f5479af",
+        "android_client_info": {
+          "package_name": "com.example.akilli_kampus"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ09GUrzhd_6EXynwZpogIdYA3X00oDc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
