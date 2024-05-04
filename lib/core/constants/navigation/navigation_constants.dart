@@ -19,6 +19,8 @@ class NavigationConstants {
 
   static const PRIVACY_POLICY = '/privacypolicy';
 
+  static const TERMS_CONDITIONS = '/termsconditions';
+
 
   static const CHANGE_PASSWORD = '/changepassword';
 

@@ -88,17 +88,17 @@ class MainPage extends StatelessWidget {
                       text: 'Ana Sayfa'),
                   buildObserver(
                       viewModel: viewModel,
-                      icon: Icons.shopping_cart,
+                      icon: Icons.announcement,
                       selectedTabIndex: 1,
                       text: "Duyurular"),
                   buildObserver(
                       viewModel: viewModel,
-                      icon: Icons.access_time_outlined,
+                      icon: Icons.qr_code,
                       selectedTabIndex: 2,
                       text: 'QR'),
                   buildObserver(
                       viewModel: viewModel,
-                      icon: Icons.ac_unit_sharp,
+                      icon: Icons.person,
                       selectedTabIndex: 3,
                       text: 'Profile'),
                 ]),

@@ -103,7 +103,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: ListTile(
-                          title: Text("Privacy"),
+                          title: Text("Gizlilik"),
                           trailing: Icon(Icons.arrow_forward_ios),
                         ),
                       ),
@@ -112,12 +112,12 @@ class _ProfilePageState extends State<ProfilePage> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        // Buraya Terms & Conditions ile ilgili yapılacak işlemleri ekle
+                        viewModel.navigation.navigateToPage(path: NavigationConstants.TERMS_CONDITIONS);
                       },
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: ListTile(
-                          title: Text("Terms & Conditions"),
+                          title: Text("Şartlar & Koşullar"),
                           trailing: Icon(Icons.arrow_forward_ios),
                         ),
                       ),

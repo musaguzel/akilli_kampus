@@ -13,27 +13,19 @@ class ChangePassword extends StatelessWidget {
         model.setContext(context);
         model.init();
       },
-      onPageBuilder: (context, viewModel, networkResult) => Theme(
-        data: ThemeData(
-          textTheme: TextTheme(
-            bodyText1: TextStyle(color: Colors.white), // Tüm metinlerin rengi beyaz
-            bodyText2: TextStyle(color: Colors.white), // Tüm metinlerin rengi beyaz
-          ),
-          inputDecorationTheme: InputDecorationTheme(
-            hintStyle: TextStyle(color: Colors.black), // Text field hint rengi siyah
-          ),
-        ),
-        child: Scaffold(
+      onPageBuilder: (context, viewModel, networkResult) => Scaffold(
           resizeToAvoidBottomInset: true,
           appBar: AppBar(
             title: const Text(
               'Şifreyi Değiştir',
               style: TextStyle(
                 fontSize: 24,
+                color: Colors.indigo,
                 fontWeight: FontWeight.bold,
               ),
             ),
             backgroundColor: Colors.transparent,
+            elevation: 0,
           ),
           body: SingleChildScrollView(
             child: Column(
@@ -74,7 +66,7 @@ class ChangePassword extends StatelessWidget {
             ),
           ),
         ),
-      ),
+
     );
   }
 }
