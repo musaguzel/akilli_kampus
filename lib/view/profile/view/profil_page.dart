@@ -3,6 +3,8 @@ import 'package:akilli_kampus/core/constants/navigation/navigation_constants.dar
 import 'package:akilli_kampus/view/profile/viewModel/profile_page_view_model.dart';
 import 'package:flutter/material.dart';
 
+import '../../privacy_policy/view/privacy_policy_page.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
 
@@ -96,7 +98,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   Card(
                     child: InkWell(
                       onTap: () {
-                        // Buraya Privacy ile ilgili yapılacak işlemleri ekle
+                        viewModel.navigation.navigateToPage(path: NavigationConstants.PRIVACY_POLICY);
                       },
                       child: const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),

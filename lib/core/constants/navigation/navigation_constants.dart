@@ -1,4 +1,5 @@
 
+import 'package:akilli_kampus/view/privacy_policy/view/privacy_policy_page.dart';
 import 'package:akilli_kampus/view/splash/view/splash_view.dart';
 
 class NavigationConstants {
@@ -12,7 +13,11 @@ class NavigationConstants {
 
   static const HOME = '/home';
 
+  static const QR = '/qr';
+
   static const MAIN = '/main';
+
+  static const PRIVACY_POLICY = '/privacypolicy';
 
 
   static const CHANGE_PASSWORD = '/changepassword';

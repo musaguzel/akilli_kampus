@@ -11,8 +11,8 @@ final MyAppTheme = ThemeData(
       secondary: Color(0xffCCD7E3)
     ),
     textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Color(0xFFFFFFFF)), // Açık tema yazı rengi
-      bodyMedium: TextStyle(color: Color(0xFFFFFFFF)), // Açık tema yazı rengi
+      bodyLarge: TextStyle(color: Color(0xFF000000)), // Açık tema yazı rengi
+      bodyMedium: TextStyle(color: Color(0xFF000000)), // Açık tema yazı rengi
     ),
     appBarTheme:  const AppBarTheme(
       foregroundColor: Colors.indigo,

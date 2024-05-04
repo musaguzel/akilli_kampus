@@ -2,6 +2,7 @@ import 'package:akilli_kampus/core/extension/context_extension.dart';
 import 'package:akilli_kampus/product/widgets/shimmer/shimmer_widget.dart';
 import 'package:akilli_kampus/view/home/view/home_page.dart';
 import 'package:akilli_kampus/view/profile/view/profil_page.dart';
+import 'package:akilli_kampus/view/qr/view/qr_page.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -94,7 +95,7 @@ class MainPage extends StatelessWidget {
                       viewModel: viewModel,
                       icon: Icons.access_time_outlined,
                       selectedTabIndex: 2,
-                      text: 'Yemek'),
+                      text: 'QR'),
                   buildObserver(
                       viewModel: viewModel,
                       icon: Icons.ac_unit_sharp,
@@ -115,7 +116,7 @@ class MainPage extends StatelessWidget {
     return const TabBarView(children: [
       HomePage(),
       HomePage(),
-      HomePage(),
+      QRCodeWidget(),
       ProfilePage(),
     ]);
   }
