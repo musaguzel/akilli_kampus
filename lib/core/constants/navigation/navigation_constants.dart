@@ -29,6 +29,8 @@ class NavigationConstants {
 
   static const TERMS_CONDITIONS = '/termsconditions';
 
+  static const STUDENT_COMMUNITY = '/studentcommunity';
+
   static const BANK_CARD = '/bankcard';
 
   static const NEWS_DETAILS = '/newsdetails';

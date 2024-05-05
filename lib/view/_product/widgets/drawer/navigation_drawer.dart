@@ -76,13 +76,13 @@ class NavigationDrawerMain extends StatelessWidget {
           onTap: ()=> selectedItem(context, 1),
         ),
         ListTile(
-          leading: const Icon(Icons.currency_lira,color: Color(0xFF4E4CCA),),
-          title: const Text("Qr ile ödeme",style: TextStyle(color: Color(
+          leading: const Icon(Icons.credit_card,color: Color(0xFF4E4CCA),),
+          title: const Text("DPUTAK KART",style: TextStyle(color: Color(
               0xFF9C9BE0)),),
           onTap: ()=> selectedItem(context, 2),
         ),if(!kIsWeb)ListTile(
           leading: const Icon(Icons.support_agent,color: Color(0xFF4E4CCA),),
-          title: const Text("Destek",style: TextStyle(color: Color(0xFF9C9BE0)),),
+          title: const Text("İstek & Öneri Bildirimi",style: TextStyle(color: Color(0xFF9C9BE0)),),
           onTap: ()=> selectedItem(context, 3),
         ),
         const Divider(color: Colors.pink,),
@@ -102,7 +102,7 @@ class NavigationDrawerMain extends StatelessWidget {
         navigation.navigateToPage(path: NavigationConstants.ACADEMIC_CALENDAR);
         break;
       case 1:
-        navigation.navigateToPage(path: NavigationConstants.TERMS_CONDITIONS);
+        navigation.navigateToPage(path: NavigationConstants.STUDENT_COMMUNITY);
         break;
       case 2:
         navigation.navigateToPage(path: NavigationConstants.BANK_CARD);

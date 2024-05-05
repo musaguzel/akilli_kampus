@@ -50,16 +50,16 @@ class MainPage extends StatelessWidget {
           drawer: NavigationDrawerMain(),
           extendBody: true,
           floatingActionButton: FloatingActionButton(
-            backgroundColor: Color(0xff475AD7),
+            backgroundColor: const Color(0xff475AD7),
               onPressed: () {
                 showModalBottomSheet(
                   isScrollControlled: true,
                   context: context,
                   builder: (BuildContext context) {
-                    return Container(
+                    return SizedBox(
                       height: context.height * 0.9,
                       child: const WebView(
-                        initialUrl: 'https://poe.com/DPU-TOPLULUK-BOT',
+                        initialUrl: 'https://poe.com/DPU-CHATBOTS',
                         javascriptMode: JavascriptMode.unrestricted,
                       ),
                     );

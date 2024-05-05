@@ -1,5 +1,7 @@
 import 'package:akilli_kampus/view/academic_calendar/view/academic_calendar_page.dart';
+import 'package:akilli_kampus/view/authentication/login/view/login_page.dart';
 import 'package:akilli_kampus/view/authentication/onboarding/view/onboarding_page.dart';
+import 'package:akilli_kampus/view/authentication/register/view/register_page.dart';
 import 'package:akilli_kampus/view/bank_card/view/bank_card_page.dart';
 import 'package:akilli_kampus/view/change_password/view/change_password._page.dart';
 import 'package:akilli_kampus/view/home/view/news_details_page.dart';
@@ -8,6 +10,7 @@ import 'package:akilli_kampus/view/privacy_policy/view/privacy_policy_page.dart'
 import 'package:akilli_kampus/view/restourant/view/restourant_page.dart';
 import 'package:akilli_kampus/view/sos/view/sos.dart';
 import 'package:akilli_kampus/view/splash/view/splash_view.dart';
+import 'package:akilli_kampus/view/student_community/view/student_community_page.dart';
 import 'package:akilli_kampus/view/terms_conditions/view/terms_conditions._page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -42,11 +45,20 @@ class NavigationRoute {
       case NavigationConstants.QR:
         return normalNavigate(const PrivacyPolicy(), NavigationConstants.QR ,args.arguments);
 
+      case NavigationConstants.STUDENT_COMMUNITY:
+        return normalNavigate(const CommunitySearchPage(), NavigationConstants.STUDENT_COMMUNITY ,args.arguments);
+
       case NavigationConstants.RESTOURANT:
         return normalNavigate(yemekhane(), NavigationConstants.RESTOURANT ,args.arguments);
 
       case NavigationConstants.ONBOARDING:
         return normalNavigate(const OnBoardingScreen(), NavigationConstants.ONBOARDING ,args.arguments);
+
+      case NavigationConstants.LOGIN:
+        return normalNavigate(const LoginPage(), NavigationConstants.LOGIN ,args.arguments);
+
+      case NavigationConstants.REGISTER:
+        return normalNavigate(const RegisterPage(), NavigationConstants.REGISTER ,args.arguments);
 
       case NavigationConstants.ACADEMIC_CALENDAR:
         return normalNavigate(const AcademicCalendar(), NavigationConstants.ACADEMIC_CALENDAR ,args.arguments);

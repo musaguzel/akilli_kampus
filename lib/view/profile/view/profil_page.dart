@@ -128,11 +128,12 @@ class _ProfilePageState extends State<ProfilePage> {
                       onTap: () {
                         // Buraya Çıkış Yap ile ilgili yapılacak işlemleri ekle
                       },
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
                         child: ListTile(
-                          title: Text("Çıkış Yap"),
-                          trailing: Icon(Icons.close),
+                          onTap: () => viewModel.firebaseAuth.signOut(),
+                          title: const Text("Çıkış Yap"),
+                          trailing: const Icon(Icons.close),
                         ),
                       ),
                     ),
