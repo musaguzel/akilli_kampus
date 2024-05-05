@@ -9,9 +9,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../../core/base/view/base_widget.dart';
 import '../../../core/components/Animation/Fade_Animation.dart';
-import '../../../core/constants/navigation/navigation_constants.dart';
 import '../../../product/widgets/shimmer/shimmer_widget.dart';
-import '../model/news_model/news_model.dart';
 import '../viewModel/home_page_view_model.dart';
 
 class HomePage extends StatelessWidget {
@@ -163,6 +161,20 @@ class HomePage extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0),
               child: GestureDetector(
                 onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return Dialog(
+                        child: CachedNetworkImage(
+                          imageUrl: viewModel.newsList[index].imageUrl.first,
+                          placeholder: (context, url) => ShimmerWidget.rectangular(heigth: 100),
+                          errorWidget: (context, url, error) => Icon(Icons.error),
+                          fit: BoxFit.cover,
+                          width: 150, // Resim genişliği istediğiniz değer olabilir
+                        ),
+                      );
+                    },
+                  );
                 },
                 child: CachedNetworkImage(
                   imageUrl: viewModel.newsList[index].imageUrl.first,
