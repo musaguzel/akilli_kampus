@@ -33,6 +33,10 @@ class HomePage extends StatelessWidget {
           body: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 8.0,top: 8.0 ,bottom: 4.0 ),
+                child: Text('Haberlerden Görseller',style: TextStyle(fontSize: 22,color: viewModel.isDarkTheme(context) ? Colors.white : Colors.black),),
+              ),
               SizedBox(height:  200 ,child: horizontalNewsList(viewModel)),
               buildNewsTitle(context,viewModel),
               //buildSliderImages(viewModel),

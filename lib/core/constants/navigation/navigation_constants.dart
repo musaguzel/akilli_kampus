@@ -31,6 +31,8 @@ class NavigationConstants {
 
   static const STUDENT_COMMUNITY = '/studentcommunity';
 
+  static const SUGGESTION = '/suggestion';
+
   static const BANK_CARD = '/bankcard';
 
   static const NEWS_DETAILS = '/newsdetails';

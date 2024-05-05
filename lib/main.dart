@@ -1,6 +1,4 @@
 import 'package:akilli_kampus/core/init/theme/app_theme.dart';
-import 'package:akilli_kampus/view/main/view/main_page.dart';
-import 'package:easy_localization/easy_localization.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';

@@ -65,6 +65,8 @@ dependencies:
   #url navigator
   url_launcher: ^6.0.0
 
+  #Image picker
+  image_picker: ^1.0.7
 
   cached_network_image: ^3.2.3
   package_info_plus: ^4.1.0
@@ -85,6 +87,7 @@ dev_dependencies:
   json_serializable: ^6.7.0
   flutter_launcher_icons: ^0.13.1
   qr_code_scanner: ^1.0.1
+
 
 
 flutter_launcher_icons:

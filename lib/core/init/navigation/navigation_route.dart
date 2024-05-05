@@ -11,6 +11,7 @@ import 'package:akilli_kampus/view/restourant/view/restourant_page.dart';
 import 'package:akilli_kampus/view/sos/view/sos.dart';
 import 'package:akilli_kampus/view/splash/view/splash_view.dart';
 import 'package:akilli_kampus/view/student_community/view/student_community_page.dart';
+import 'package:akilli_kampus/view/suggestion/view/suggestion_page.dart';
 import 'package:akilli_kampus/view/terms_conditions/view/terms_conditions._page.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
@@ -47,6 +48,9 @@ class NavigationRoute {
 
       case NavigationConstants.STUDENT_COMMUNITY:
         return normalNavigate(const CommunitySearchPage(), NavigationConstants.STUDENT_COMMUNITY ,args.arguments);
+
+      case NavigationConstants.SUGGESTION:
+        return normalNavigate(const SuggestionPage(), NavigationConstants.SUGGESTION ,args.arguments);
 
       case NavigationConstants.RESTOURANT:
         return normalNavigate(yemekhane(), NavigationConstants.RESTOURANT ,args.arguments);
